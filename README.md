@@ -1,3 +1,7 @@
+# React 프로젝트를 할 때 유용한 기능들을 모아논 브랜치
+
+prettier, ESLint, Snipper 연습
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
