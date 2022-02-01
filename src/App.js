@@ -79,7 +79,7 @@ function App() {
     <UserDispatch.Provider value={dispatch}>
       <CreateUser />
       <UserList users={users} />
-      <div>활성사용자 수 : 10 {count}</div>
+      <div>활성사용자 수 : 100{count}</div>
     </UserDispatch.Provider>
   );
 }
