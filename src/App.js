@@ -1,30 +1,27 @@
 import React from 'react';
-import styled, { ThemeProvider } from 'styled-components';
-import Button from './components/Button';
+import { createGlobalStyle } from 'styled-components';
+import TodoCreate from './components/TodoCreate';
+import TodoHead from './components/TodoHead';
+import TodoList from './components/TodoList';
+import TodoTemplate from './components/TodoTemplate';
+import { TodoProvider } from './TodoContext';
 
-const AppBlock = styled.div`
-  width: 512px;
-  margin: 0 auto;
-  margin-top: 4rem;
-  border: 1px solid black;
-  padding: 1rem;
-  `;
-
-const palette = {
-  blue: '#228be6',
-  gray: '#496057',
-  pink: '#f06595'
-}
+const GlobalStyle = createGlobalStyle`
+  body  {
+    background: #e9ecef;
+  }
+`;
 
 function App() {
   return (
-    <ThemeProvider theme={{ palette }}>
-      <AppBlock>
-        <Button>Button</Button>
-        <Button color='gray'>Button</Button>
-        <Button color='pink'>Button</Button>
-      </AppBlock>
-    </ThemeProvider>
+    <TodoProvider>
+      <GlobalStyle />
+      <TodoTemplate>
+        <TodoHead />
+        <TodoList />
+        <TodoCreate />
+      </TodoTemplate>
+    </TodoProvider>
   )
 }
 
